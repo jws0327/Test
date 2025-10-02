@@ -2,7 +2,7 @@ name: Deploy FastAPI to Lambda (SAM)
 
 on:
   push:
-    branches: [ main ]   # 원하시는 브랜치로 변경
+    branches: [ main ]   # 원하는 브랜치로 변경
 
 permissions:
   id-token: write   # OIDC로 AWS AssumeRole
@@ -58,4 +58,4 @@ jobs:
           fi
 
       - name: SAM deploy (non-interactive)
-        run: sam deploy
+        run: sam deploy --no-interactive
